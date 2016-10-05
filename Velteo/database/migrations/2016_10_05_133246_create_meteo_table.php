@@ -14,13 +14,13 @@ class CreateMeteoTable extends Migration
     public function up()
     {
       Schema::create('Meteo', function(Blueprint $table){
-          $table->increments('id'),
-          $table->float('temperature'),
-          $table->float('pressure'),
-          $table->integer('humidity'),
-          $table->string('weather'),
-          $table->float('wind_speed'),
-          $table->timestamp('timestamp')
+          $table->increments('id');
+          $table->float('temperature');
+          $table->float('pressure');
+          $table->integer('humidity');
+          $table->string('weather');
+          $table->float('wind_speed');
+          $table->timestamp('timestamp');
       });
     }
 
