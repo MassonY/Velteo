@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/set', function(){
+Route::get('/getDataMeteo', function(){
     return view('getDataMeteo');
+});
+
+Route::get('/getDataStationStatic', function(){
+    return view('getDataStationStatic');
+});
+
+Route::get('/getDataStationVariable', function(){
+    return view('getDataStationVariable');
 });
