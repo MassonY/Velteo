@@ -13,7 +13,7 @@ class CreateStationStaticTable extends Migration
      */
     public function up()
     {
-      Schema::create('station_static', function(Blueprint $table){
+      Schema::create('station_statics', function(Blueprint $table){
         $table->increments("id");
         $table->string("name");
         $table->double("lat");
@@ -31,6 +31,6 @@ class CreateStationStaticTable extends Migration
      */
     public function down()
     {
-      Schema::drop("station_static");
+      Schema::drop("station_statics");
     }
 }
