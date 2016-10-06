@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Meteo extends Model
 {
     protected $fillable = [
-      'id','temp','pressure','humidity','weather','wind_speed','timestamp'
-    ]
+      'id','temperature','pressure','humidity','weather','wind_speed','timestamp'
+    ];
 }
