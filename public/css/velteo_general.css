@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    width: 100%;
+    background-color: orange;
+    color: white;
+}
+
+header h1{
+    font-weight: 100;
+}
+
+#title{
+    margin-left: 5%;
+    font-size: 2em;
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+}
