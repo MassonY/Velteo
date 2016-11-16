@@ -1,0 +1,35 @@
+.tiles, .news{
+    width: 80%;
+    justify-content: space-around;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tiles > *{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border: solid 1px #ff8b00;
+    border-radius: 5px;
+    min-width: 150px;
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.tiles > * > *{
+    text-align: center;
+}
+
+body > h2{
+    text-align: center;
+}
+
+.news{
+    flex-direction: column;
+}
+
+.news > article{
+    border-bottom: 1px solid rgba(255,139,0,1);
+}
