@@ -26,3 +26,26 @@ Route::get('/getDataStationStatic', function(){
 Route::get('/getDataStationVariable', function(){
     return view('getDataStationVariable');
 });
+
+Route::get('/display', function(){
+    $lava = new \Khill\Lavacharts\Lavacharts();
+
+    $reasons = $lava->DataTable();
+
+    $reasons->addStringColumn('Reasons')
+        ->addNumberColumn('Percent')
+        ->addRow(array('Check Reviews', 5))
+        ->addRow(array('Watch Trailers', 2))
+        ->addRow(array('See Actors Other Work', 4))
+        ->addRow(array('Settle Argument', 89));
+
+
+    $donutchart = $lava->DonutChart('IMDB', $reasons, [
+        'title' => 'Reasons I visit IMDB'
+    ]);
+
+
+    return view('display', [
+        'lava'      => $lava
+    ]);
+});
