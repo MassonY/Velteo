@@ -4,20 +4,36 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
         <title>Velteo</title>
+        <link rel="icon" type="image/png" href="{{ asset('/image/icon.png') }}" />
         <link href="{{ asset('/css/velteo_general.css') }}" rel="stylesheet" />
-
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+        @yield('css')
     </head>
     <header>
         <div id="title">
             <h1>Velteo</h1>
         </div>
+        <ul class="navContent">
+            <li ><a href="">Home</a></li>
+            <li><a href="">Graph1</a></li>
+            <li><a href="">Graph2</a></li>
+            <li><a href="">Graph3</a></li>
+        </ul>
+        <div class="spinner-master2">
+            <input type="checkbox" id="spinner-form2" />
+            <label for="spinner-form2" class="spinner-spin2">
+                <div class="spinner2 diagonal part-1"></div>
+                <div class="spinner2 horizontal"></div>
+                <div class="spinner2 diagonal part-2"></div>
+            </label>
+        </div>
     </header>
     <body>
         @yield('content')
     </body>
+    <div class="footerSpacer"></div>
     <footer>
-
+        <p>Created By Thomas Gille, Yohan Masson and Lucas Herault</p>
     </footer>
 
     <!-- JAVASCRIPT -->
