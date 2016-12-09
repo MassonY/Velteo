@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/graphs', 'GraphsController@graph_hours');
+
 Route::get('/getDataMeteo', function(){
     return view('getDataMeteo');
 });
