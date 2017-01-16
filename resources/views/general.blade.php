@@ -34,6 +34,6 @@
     </body>
     <div class="footerSpacer"></div>
     <footer>
-        <p>Created By Thomas Gilles, Yohan Masson and Lucas Herault</p>
+        <p>Created By Thomas Gille, Yohan Masson and Lucas Heraut</p>
     </footer>
 </html>
