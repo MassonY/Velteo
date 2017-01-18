@@ -28,3 +28,7 @@ Route::get('/getDataStationStatic', function(){
 Route::get('/getDataStationVariable', function(){
     return view('getDataStationVariable');
 });
+
+Route::get('/graph_unique/{id}', 'GraphsController@graph_unique');
+
+Route::get('/graph_unique', 'GraphsController@graph_unique_table');

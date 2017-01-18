@@ -9,6 +9,10 @@
 
 @extends('general')
 
+@section('css')
+    <link href="{{asset('css/graph.css')}}" rel="stylesheet">
+@endsection
+
 @section('js')
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -22,11 +26,7 @@
         ?>
     </div>
     <?php
-        //foreach ($data as $station) {
-        //dump($station->nb_bikeStandAvailable, $station->nb_bikeAvailable);
-        //echo "<br />";
-        //}
-
+    echo "<h2> Graph of the Station : $name </h2>"
     ?>
     <div id="chart_div"></div>
 @endsection

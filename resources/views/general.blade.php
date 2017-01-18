@@ -15,10 +15,8 @@
             <h1>Velteo</h1>
         </div>
         <ul class="navContent">
-            <li ><a href="">Home</a></li>
-            <li><a href="">Graph1</a></li>
-            <li><a href="">Graph2</a></li>
-            <li><a href="">Graph3</a></li>
+            <li ><a href="{{asset('/')}}">Home</a></li>
+            <li><a href="{{asset('graph_unique')}}">Graph Unique</a></li>
         </ul>
         <div class="spinner-master2">
             <input type="checkbox" id="spinner-form2" />
