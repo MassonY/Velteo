@@ -33,4 +33,6 @@ Route::get('/graph_unique/{id}', 'GraphsController@graph_unique');
 
 Route::get('/graph_unique', 'GraphsController@graph_unique_table');
 
+Route::get('/graph_mean', 'GraphsController@graph_mean');
+
 Route::get('/maps', 'GraphsController@maps');

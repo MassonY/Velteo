@@ -17,15 +17,8 @@
         <ul class="navContent">
             <li ><a href="{{asset('/')}}">Home</a></li>
             <li><a href="{{asset('graph_unique')}}">Graph Unique</a></li>
+            <li><a href="{{asset('graph_mean')}}">Graph Moyen</a></li>
         </ul>
-        <div class="spinner-master2">
-            <input type="checkbox" id="spinner-form2" />
-            <label for="spinner-form2" class="spinner-spin2">
-                <div class="spinner2 diagonal part-1"></div>
-                <div class="spinner2 horizontal"></div>
-                <div class="spinner2 diagonal part-2"></div>
-            </label>
-        </div>
     </header>
     <body>
         @yield('content')
