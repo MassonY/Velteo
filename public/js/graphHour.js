@@ -29,7 +29,6 @@ function drawUniqueStation(){
     data.addRows(array);
     console.log(array);
 
-
     var options = {
         hAxis: {
             title: 'Time'
