@@ -28,7 +28,7 @@ class GraphsController extends BaseController
     public function __construct()
     {
     }
-
+  
     public function graph_mean(){
         $name = "Moyenne des utilisations";
         $data = DB::select("SELECT AVG(sv.nb_bikeAvailable), m.id
