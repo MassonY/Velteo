@@ -32,3 +32,5 @@ Route::get('/getDataStationVariable', function(){
 Route::get('/graph_unique/{id}', 'GraphsController@graph_unique');
 
 Route::get('/graph_unique', 'GraphsController@graph_unique_table');
+
+Route::get('/maps', 'GraphsController@maps');

@@ -38,6 +38,14 @@ class GraphsController extends BaseController
         );
     }
 
+    public function maps(){
+        $data = DB::select("select id, name , lat , lng from station_statics");
+        return view(
+            'maps',
+            ['data' => $data]
+        );
+    }
+
     public function graph_unique($id){
         $name = DB::select("select name from station_statics where id = $id")[0]->name;
         $data = DB::select("select sv.created_at, sv.nb_bikeAvailable, temperature
