@@ -26,7 +26,7 @@
         ?>
     </div>
     <?php
-    echo "<h2> Graph of the Station : $name </h2>"
+    echo "<h2> $name </h2>"
     ?>
     <div id="chart_div"></div>
 @endsection

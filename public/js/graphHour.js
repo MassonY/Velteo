@@ -23,7 +23,7 @@ function drawUniqueStation(){
     var array = [];
     if(Input != undefined) {
         jQuery.each(Input, function (i, val) {
-            array.push([new Date(val.created_at), val.nb_bikeAvailable, val.temperature - 273.15]);
+            array.push([new Date(val.created_at), parseFloat(val.nb_bikeAvailable), parseFloat(val.temperature) - 273.15]);
         })
     }
     data.addRows(array);
