@@ -8,6 +8,7 @@
         <link href="{{ asset('/css/velteo_general.css') }}" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
         @yield('css')
+        @yield('js')
     </head>
     <header>
         <div id="title">
@@ -26,8 +27,4 @@
     <footer>
         <p>Created By Thomas Gille, Yohan Masson and Lucas Heraut</p>
     </footer>
-
-    <!-- JAVASCRIPT -->
-
-    @yield('scripts')
 </html>

@@ -78,6 +78,7 @@ class GraphsController extends BaseController
 
     public function maps(){
         $data = DB::select("select id, name , lat , lng from station_statics");
+        $data = json_encode($data);
         return view(
             'maps',
             ['data' => $data]
