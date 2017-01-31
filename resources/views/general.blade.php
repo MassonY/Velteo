@@ -18,6 +18,7 @@
             <li ><a href="{{asset('/')}}">Home</a></li>
             <li><a href="{{asset('graph_unique')}}">Graph Unique</a></li>
             <li><a href="{{asset('graph_mean')}}">Graph Moyen</a></li>
+            <li><a href="{{asset('maps')}}">Carte interactive</a></li>
         </ul>
     </header>
     <body>

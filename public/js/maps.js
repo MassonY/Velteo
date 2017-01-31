@@ -48,38 +48,10 @@ $(document).ready(function(){
 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
-                infowindow.setContent("bientot pointera vers la page :" + locations[i][3]);
-                infowindow.open(map, marker);
+                window.location.replace("/graph_unique/"+locations[i][3]);
             }
         })(marker, i));
     }
 
 
 });
-function drawUniqueStation(){
-
-
-
-
-    var array = [];
-    if(Input != undefined) {
-        jQuery.each(Input, function (i, val) {
-            array.push([new Date(val.created_at), parseFloat(val.nb_bikeAvailable), parseFloat(val.temperature) - 273.15]);
-        })
-    }
-    data.addRows(array);
-    console.log(array);
-
-    var options = {
-        hAxis: {
-            title: 'Time'
-        },
-        vAxis: {
-            title: 'Number'
-        },
-        displayAnnotations: true
-    };
-
-    var chart = new google.visualization.AnnotatedTimeLine(document.getElementById('chart_div'));
-    chart.draw(data, options);
-}
