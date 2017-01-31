@@ -1,0 +1,10 @@
+#map{
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    margin: auto;
+    height: calc( 100% - 153px);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ff8b00;
+}
