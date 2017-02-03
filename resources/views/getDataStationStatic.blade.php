@@ -12,8 +12,6 @@ $json = file_get_contents('https://api.jcdecaux.com/vls/v1/stations?contract=Lyo
 $obj = json_decode($json);
 
 foreach($obj as $current){
-    if(\App\Station_Static::where('id', $current->number))
-        continue;
     $newStation = new \App\Station_Static();
     $newStation->id = $current->number;
     $newStation->name =  $current->name;

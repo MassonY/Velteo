@@ -1,0 +1,11 @@
+h2{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+#chart_div{
+    width: 90%;
+    margin: auto;
+}
+

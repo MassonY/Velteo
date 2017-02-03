@@ -9,21 +9,24 @@
 
 @extends('general')
 
+@section('css')
+    <link href="{{asset('css/graph.css')}}" rel="stylesheet">
+@endsection
+
+@section('js')
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/graphHour.js') }}" ></script>
+@endsection
+
 @section('content')
-
-    {{--
-    $data = DB::table('Station_Variables')->select('id','nb_bikeStandAvailable','nb_bikeAvailable')->get();
-
-        foreach ($idStation as $station) {
-        dump($station->nb_bikeStandAvailable, $station->nb_bikeAvailable);
-        echo "<br />";
-        }
-    --}}
+    <div id="dom-target" style="display: none;">
+        <?php
+            echo htmlspecialchars($data);
+        ?>
+    </div>
+    <?php
+    echo "<h2> $name </h2>"
+    ?>
     <div id="chart_div"></div>
 @endsection
-
-@section('scripts')
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="/js/graphHour.js"></script>
-@endsection
-

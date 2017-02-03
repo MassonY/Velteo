@@ -1,0 +1,31 @@
+#table_holder{
+    width:90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.table_element{
+    display: inline-flex;
+    flex-basis: 23%;
+    text-align: center;
+    height: 150px;
+    min-width: 150px;
+    background-color: #ff8b00;
+    border: solid 5px #cc6b00;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.table_element a{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+}
+
+.table_element a p{
+
+}
