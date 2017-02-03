@@ -78,7 +78,31 @@ class GraphsController extends BaseController
 
     public function maps(){
         $data = DB::select("select id, name , lat , lng from station_statics");
+        foreach($data as $elem) {
+            $actual = DB::select("select nb_bikeAvailable, nb_bikeStandAvailable 
+            from station_variables sv
+            where   sv.id_station = $elem->id
+            ORDER BY sv.created_at DESC limit 1");
+            $summ = $actual[0]->nb_bikeAvailable+$actual[0]->nb_bikeStandAvailable;
+            $actualString = (string)$actual[0]->nb_bikeAvailable." / $summ";
+            $elem->string = $actualString;
+
+            /*$avg = DB::select("select AVG(nb_bikeAvailable)
+                  from station_variables sv
+                  where sv.id_station = $elem->id
+                  and sv.created_at between $mytime and $lastWeek");*/
+            $rand = rand(-5,5);
+            $nactualbk = $actual[0]->nb_bikeAvailable + $rand;
+            if($nactualbk < 0)
+                $nactualbk = 0;
+            else if ($nactualbk > $summ)
+                $nactualbk = $summ;
+            $actualString = (string)$nactualbk." / $summ";
+            $elem->string2 = $actualString;
+        }
+
         $data = json_encode($data);
+
         return view(
             'maps',
             ['data' => $data]

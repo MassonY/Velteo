@@ -19,9 +19,11 @@ $(document).ready(function(){
 
     if(Input != undefined) {
         jQuery.each(Input, function (i, val) {
-            locations.push([val.name, val.lat, val.lng, val.id]);
+            locations.push([val.name, val.lat, val.lng, val.id, val.string, val.string2]);
         })
     }
+
+    console.log(locations);
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
@@ -41,7 +43,7 @@ $(document).ready(function(){
 
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
             return function() {
-                infowindow.setContent(locations[i][0]);
+                infowindow.setContent(locations[i][0] + " <br/> Disponibilite : " + locations[i][4] + "<br/> Estimation : " + locations[i][5]);
                 infowindow.open(map, marker);
             }
         })(marker, i));
