@@ -46,6 +46,12 @@ $(document).ready(function(){
             }
         })(marker, i));
 
+        google.maps.event.addListener(marker, 'mouseout', (function(marker, i) {
+            return function() {
+                infowindow.close();
+            }
+        })(marker, i));
+
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 window.location.replace("/graph_unique/"+locations[i][3]);
